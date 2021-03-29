@@ -64,7 +64,6 @@ function Search({ onLoadImages, textInputChange, amountInputChange }) {
 	const classes = useStyles();
 
 	// states
-	const [error, setError] = useState(false);
 	const [searchText, setSearchText] = useState("");
 	const [amount, setAmount] = useState("15");
 	const [backgroundImg, setBackgroundImg] = useState(null);
