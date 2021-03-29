@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useCallback } from "react";
+import Header from "./component/Header/Header";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Search from "./component/Search/Search";
+import Main from "./component/Main/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [amount, setAmount] = useState("");
+	const [text, setText] = useState("");
+	const [images, setImages] = useState([]);
+
+	const amountChangeHandler = (input) => setAmount(input);
+	const textChangeHandler = (input) => setText(input);
+	const filteredImagesHandler = useCallback(
+		(filteredImages) => setImages(filteredImages),
+		[]
+	);
+
+	return (
+		<div style={{ minWidth: "320px" }}>
+			<CssBaseline />
+
+			<Header />
+			<Search
+				onLoadImages={filteredImagesHandler}
+				amountInputChange={amountChangeHandler}
+				textInputChange={textChangeHandler}
+			/>
+			<Main photos={images} amount={amount} inputText={text} />
+		</div>
+	);
 }
 
 export default App;
