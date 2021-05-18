@@ -1,0 +1,31 @@
+.error {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.error__info {
+	width: 100%;
+	max-width: 500px;
+	height: 200px;
+	background-color: var(--seccondary-color);
+	padding: 50px;
+}
+
+.error__info h1 {
+	text-transform: uppercase;
+	margin-bottom: 18px;
+}
+.error__info p {
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+.error__info button {
+	padding: 8px 25px;
+	text-transform: capitalize;
+}

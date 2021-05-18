@@ -1,0 +1,69 @@
+.main {
+}
+
+.main__title {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.main__title h3 span {
+	font-weight: 400;
+}
+
+.main__form {
+	width: 200px;
+	display: flex;
+}
+
+.main__form label {
+	text-transform: capitalize;
+	margin-right: 5px;
+	padding: 5px 0;
+}
+
+.main__form select {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.main__form select:focus {
+	outline: none;
+}
+
+.my-masonry-grid {
+	display: -webkit-box; /* Not needed if autoprefixing */
+	display: -ms-flexbox; /* Not needed if autoprefixing */
+	display: flex;
+	margin-left: -30px; /* gutter size offset */
+	width: auto;
+}
+.my-masonry-grid_column {
+	padding-left: 30px; /* gutter size */
+	background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+	/* change div to reference your elements you put in <Masonry> */
+	background: grey;
+	margin-bottom: 30px;
+}
+
+.main__loading {
+	height: 500px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+	.main__title {
+		flex-direction: column;
+	}
+
+	.main__title form {
+		margin-top: 10px;
+	}
+}
