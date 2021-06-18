@@ -2,6 +2,7 @@
 	background-color: var(--primary-color);
 	height: 80px;
 	display: flex;
+	position: relative;
 }
 
 .nav .container {
@@ -68,6 +69,7 @@
 }
 
 .nav__toggle i {
+	width: 50px;
 	color: #fff;
 	font-size: 30px;
 	cursor: pointer;

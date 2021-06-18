@@ -18,11 +18,9 @@ export default function useFetch() {
 
 			const data = await response.json();
 			callbackFunc(data);
-			console.log(data);
 			setLoading(false);
 		} catch (error) {
 			setError(error);
-			console.log(error);
 			setLoading(false);
 		}
 	}, []);

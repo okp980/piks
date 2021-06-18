@@ -19,11 +19,12 @@ function App() {
 
 	const { fetchRequest, loading, error } = useFetch();
 
-	const handldeSearchText = (e) => {
-		if (e.target.value.trim() < 0) {
+	const handleSearchText = (word) => {
+		if (word.length === 0) {
+			setSearchText("happy");
 			return;
 		}
-		setSearchText(e.target.value.trim());
+		setSearchText(word);
 	};
 
 	const handleDataRequest = useCallback((data) => {
@@ -53,8 +54,7 @@ function App() {
 		<div>
 			<Nav
 				handleChange={changeSearchKeyword}
-				searchText={searchText}
-				handldeSearchText={handldeSearchText}
+				onHandleSearch={handleSearchText}
 			/>
 			<Hero />
 			<Main
