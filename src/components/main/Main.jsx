@@ -21,7 +21,7 @@ export default function Main({ resultPhotos, isLoading, error, filterAmount, cha
 
 
 
-    // if (error ) return <p style={{ textAlign: 'center' }}>error loading request</p>
+
     if (isLoading || !resultPhotos) return <div className="main__loading"><p>Loading...</p></div>
     return (
         <div className='main'>

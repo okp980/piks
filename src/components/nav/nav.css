@@ -97,8 +97,8 @@
 		font-size: 14px;
 		margin-left: 0;
 	}
-}
 
-.nav__menu--close {
-	transform: translateX(100vw);
+	.nav__menu--close {
+		transform: translateX(100vw);
+	}
 }

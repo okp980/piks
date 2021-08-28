@@ -8,12 +8,11 @@ export default function useFetch() {
 			setLoading(true);
 			const response = await fetch(url, {
 				headers: {
-					Authorization:
-						"563492ad6f917000010000015443aafbf5ad4197a4ca82be5b699ad4",
+					Authorization: `${process.env.REACT_APP_API_KEY}`, // **input your own api key here
 				},
 			});
 			if (!response.ok) {
-				throw new Error("errors everywhere");
+				throw new Error("Error from Server");
 			}
 
 			const data = await response.json();

@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import './nav.css'
 
-export default function Nav({ handleChange, onHandleSearch }) {
+function Nav({ handleChange, onHandleSearch }) {
     const [isOpen, setIsOpen] = useState(false)
-    const [input, setInput] = useState('happy')
+    const [input, setInput] = useState('')
 
     const handleInput = (e) => {
         if (e.target.value.trim() < 0) {
             return;
         }
         setInput(e.target.value.trim());
-
     }
 
+    // ** sets input after a user pause typing
     useEffect(() => {
-
-        const timer = setTimeout((e) => {
+        const timer = setTimeout(() => {
             onHandleSearch(input)
-            console.log(input);
         }, 1000)
         return () => {
             clearTimeout(timer)
         }
+    }, [input, onHandleSearch]) //onHandlerSearch prop has been handled with useCallback to prevent unwanted action of useEffect
 
-    }, [input, onHandleSearch])
+    //  ** updates the searchText value to the category the user clicks from nav
+    const handleNavigation = (category) => {
+        handleChange(category)
+        setIsOpen(prev => !prev)
+    }
     return (
         <nav className='nav'>
             <div className="container">
@@ -40,19 +43,19 @@ export default function Nav({ handleChange, onHandleSearch }) {
                     {!isOpen ? <i className="fas fa-bars"></i> : <i className="fas fa-times"></i>}
                 </div>
                 <ul className={isOpen ? "nav__menu" : "nav__menu nav__menu--close"}>
-                    <li className="nav__menu__items" onClick={() => handleChange('men')}>
+                    <li className="nav__menu__items" onClick={() => handleNavigation('men')}>
                         men
                     </li>
-                    <li className="nav__menu__items" onClick={() => handleChange('women')}>
+                    <li className="nav__menu__items" onClick={() => handleNavigation('women')}>
                         women
                     </li>
-                    <li className="nav__menu__items" onClick={() => handleChange('cars')}>
+                    <li className="nav__menu__items" onClick={() => handleNavigation('cars')}>
                         cars
                     </li>
-                    <li className="nav__menu__items" onClick={() => handleChange('house')}>
+                    <li className="nav__menu__items" onClick={() => handleNavigation('house')}>
                         house
                     </li>
-                    <li className="nav__menu__items" onClick={() => handleChange('fashion')}>
+                    <li className="nav__menu__items" onClick={() => handleNavigation('fashion')}>
                         fashion
                     </li>
                 </ul>
@@ -60,3 +63,5 @@ export default function Nav({ handleChange, onHandleSearch }) {
         </nav>
     )
 }
+
+export default Nav;
