@@ -17,7 +17,7 @@ A simple react web app which enables users to view images depending on their sea
 ---
 
 ## Live Link
-[https://piks.netlify.app](piks.netlify.app)
+[https://piks.netlify.app/](https://piks.netlify.app/)
 
 ---
 
