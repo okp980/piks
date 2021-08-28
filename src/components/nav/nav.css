@@ -2,7 +2,8 @@
 	background-color: var(--primary-color);
 	height: 80px;
 	display: flex;
-	position: relative;
+	position: sticky;
+	top: 0;
 }
 
 .nav .container {
@@ -22,6 +23,7 @@
 .nav__menu {
 	display: flex;
 	transition: all 250ms ease-in-out;
+	z-index: 999;
 }
 
 .nav__menu__items {
@@ -66,6 +68,7 @@
 
 .nav__toggle {
 	display: none;
+	z-index: 1000;
 }
 
 .nav__toggle i {
@@ -87,7 +90,6 @@
 		right: 0;
 		bottom: 0;
 		padding: 40px;
-
 		flex-direction: column;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
