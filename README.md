@@ -8,6 +8,9 @@ A simple react web app which enables users to view images depending on their sea
 ![piks-desktop](https://user-images.githubusercontent.com/66972059/131231772-280c15ae-c25a-4f41-b53b-57774cee02eb.jpg)
 ---
 
+<img width="475" alt="piks-mobile" src="https://user-images.githubusercontent.com/66972059/131231937-eaa1079a-7576-434b-a0e9-a3327a3fd507.png">
+---
+
 ## Hooks Used
 
 - useState
