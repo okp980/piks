@@ -5,7 +5,7 @@
 A simple react web app which enables users to view images depending on their search. Different categories in navigation for users to quickly get images.
 
 ---
-<img width="779" alt="doingz" src="https://user-images.githubusercontent.com/66972059/131048032-95170101-2450-45fb-91f5-d4b5a7ec398c.png">
+![piks-desktop](https://user-images.githubusercontent.com/66972059/131231772-280c15ae-c25a-4f41-b53b-57774cee02eb.jpg)
 ---
 
 ## Hooks Used
