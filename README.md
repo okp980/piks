@@ -33,6 +33,11 @@ A simple react web app which enables users to view images depending on their sea
 - use of the useCallback hook for component optimization to prevent uncontrolled component re-render.
 - Prevent fetch action from occuring while a user is still typing but make the api call after the user pause typing
 
+---
+
+## Credits
+- Pexel Api- http://www.pexel.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
